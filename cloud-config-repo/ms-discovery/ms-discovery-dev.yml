@@ -1,0 +1,16 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: ms-discovery
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: off
+    fetch-registry: off
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+  environment: development
